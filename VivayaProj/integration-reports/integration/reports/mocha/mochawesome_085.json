@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2021-03-30T16:50:27.277Z",
+    "end": "2021-03-30T16:51:40.992Z",
+    "duration": 73715,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "14d9f2c3-0046-4002-9ea9-2fc132f726eb",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a07_VerifyDashboard.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a07_VerifyDashboard.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fb97146c-4caa-4f31-b306-8b7ab7746b71",
+          "title": "Verify the Elements within Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test links within Guide Dashboard",
+              "fullTitle": "Verify the Elements within Dashboard Test links within Guide Dashboard",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "8fb9dced-a58b-4389-b28f-ab0c7c36020c",
+              "parentUUID": "fb97146c-4caa-4f31-b306-8b7ab7746b71",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify links within Seeker Dashboard",
+              "fullTitle": "Verify the Elements within Dashboard Verify links within Seeker Dashboard",
+              "timedOut": null,
+              "duration": 65285,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ndashBoard.select_Book_More();\ncy.url().should('eq', 'https://stage.vivayalive.com/schedule');\ncy.go('back');\ndashBoard.select_View_FullClass_History();\ncy.url().should('eq', 'https://stage.vivayalive.com/dashboard/history');\ncy.go('back');\ndashBoard.select_Shopping_Cart();\ncy.url().should('eq', 'https://stage.vivayalive.com/cart');\ncy.go('back');\ndashBoard.select_My_Password();\ncy.url().should('eq', 'https://stage.vivayalive.com/account');\ncy.go('back');\ndashBoard.select_Contact_Vivaya_Seeker();\ncy.url().should('eq', 'https://stage.vivayalive.com/site/contact');\ncy.go('back');\ndashBoard.select_My_Referral();\ncy.url().should('eq', 'https://stage.vivayalive.com/dashboard/referral-detail/3884');\ncy.go('back');\ndashBoard.select_My_Account_Seeker();\ncy.url().should('eq', 'https://stage.vivayalive.com/account');\ncy.go('back');\ndashBoard.select_Payment_Info();\ncy.url().should('eq', 'https://stage.vivayalive.com/account/edit-cc');\ncy.go('back');\ndashBoard.select_Edit_Profile_Left_Section_Seeker();\ncy.url().should('eq', 'https://stage.vivayalive.com/account');",
+              "err": {},
+              "uuid": "8ac675ac-c28d-43e6-9e2f-d8b27c1b1ad7",
+              "parentUUID": "fb97146c-4caa-4f31-b306-8b7ab7746b71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8ac675ac-c28d-43e6-9e2f-d8b27c1b1ad7"
+          ],
+          "failures": [],
+          "pending": [
+            "8fb9dced-a58b-4389-b28f-ab0c7c36020c"
+          ],
+          "skipped": [],
+          "duration": 65285,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

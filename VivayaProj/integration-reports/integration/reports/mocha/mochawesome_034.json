@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-30T00:28:11.427Z",
+    "end": "2021-03-30T00:28:28.421Z",
+    "duration": 16994,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2bcda843-0d54-44b7-8729-963bc338f30c",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a08_Verify_Referral.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a08_Verify_Referral.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e0fa528a-fce6-4d2f-88eb-3ac346dcb21c",
+          "title": "Verify the Referral Link and Popup",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Referral Popup",
+              "fullTitle": "Verify the Referral Link and Popup Verify the Referral Popup",
+              "timedOut": null,
+              "duration": 14200,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ndashBoard.select_My_Referral_From_Menu();\ncy.get('#modal-referral').should('contain.text', 'Refer a friend, get $10!');\ncy.get('#modal-referral').should('contain.text', 'Invite your friends and family to practice with you at VIVAYA. You receive $10 for every new seeker referral.*');\ncy.get('#modal-referral').should('contain.text', '*You will receive a $10 credit for every successful referral. This credit will be added to your seeker account and can be applied toward your next VIVAYA purchase.  Successful referral requires that the new seeker makes their first VIVAYA purchase. Multiple referrals are possible.');\ncy.get('.field-btn > .btn').should('be.visible');\ncy.get('.col-md-7 > .nav > :nth-child(2) > a').click(); //Verify Facebook button in the modal\ncy.get('#r-share-facebook').should('be.visible');\ncy.get('.col-md-7 > .nav > :nth-child(3) > a').click(); //Verify Twitter button in the modal\ncy.get('#r-share-twitter').should('be.visible');",
+              "err": {},
+              "uuid": "313c69c6-fbc9-45e8-aa9b-4413ac5c2da0",
+              "parentUUID": "e0fa528a-fce6-4d2f-88eb-3ac346dcb21c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "313c69c6-fbc9-45e8-aa9b-4413ac5c2da0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14200,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-09T22:26:01.601Z",
+    "end": "2021-04-09T22:26:33.429Z",
+    "duration": 31828,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fcdd4c02-7c72-409a-8d8c-e017c5a7c818",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a03_VerifyWhatWeOfferPage.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a03_VerifyWhatWeOfferPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02fca638-421e-4703-a68d-f93a757773dc",
+          "title": "Tests to confirm the correct rediection to Schedule and elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Schedule page as Logged out",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Schedule page as Logged out",
+              "timedOut": null,
+              "duration": 9372,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "whatWeOffer.select_WhatweOffer_When_Logout();\ncy.url().should('eq', 'https://stage.vivayalive.com/offerings');\ncy.get('.text-center > strong').should('contain', 'VIVAYA Offerings');",
+              "err": {},
+              "uuid": "0a190651-d5c6-4ae2-bed6-aee44633dd1b",
+              "parentUUID": "02fca638-421e-4703-a68d-f93a757773dc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Schedule Page as Logged in user",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Schedule Page as Logged in user",
+              "timedOut": null,
+              "duration": 13812,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nwhatWeOffer.select_WhatweOffer_When_Login();\ncy.url().should('eq', 'https://stage.vivayalive.com/offerings');\ncy.get('.text-center > strong').should('contain', 'VIVAYA Offerings');",
+              "err": {},
+              "uuid": "8445c832-5ace-484e-a00f-2cd6ba0f1455",
+              "parentUUID": "02fca638-421e-4703-a68d-f93a757773dc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0a190651-d5c6-4ae2-bed6-aee44633dd1b",
+            "8445c832-5ace-484e-a00f-2cd6ba0f1455"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23184,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

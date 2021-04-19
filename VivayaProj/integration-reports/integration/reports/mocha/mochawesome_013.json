@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2021-03-27T01:45:17.774Z",
+    "end": "2021-03-27T01:46:05.237Z",
+    "duration": 47463,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "245d09c6-1a2b-40c6-b2c4-c91219b24666",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a11_BookEvent_Cancel_FDashboard.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a11_BookEvent_Cancel_FDashboard.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "908315c2-1430-475d-8aa7-74e95d001e01",
+          "title": "Booking Event and Cancel the Event from Seeker Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event as a Guide",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Create an Event as a Guide",
+              "timedOut": null,
+              "duration": 14698,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\nhomePage.fill_Email('guide@tester1.com');\nhomePage.fill_Password('perrodelmal');\nhomePage.submit_Credentials();\ndashboard.go_to_Dashboard_From_Menu();\ndashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('class test');\ncy.wait(2000);\neventCreationPage.add_Description('This is a class test');\neventCreationPage.add_Custom_Number_Of_Days(1);\neventCreationPage.custom_Start_Time(10);\neventCreationPage.press_Add();\nhomePage.logout_Account();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#accountNav > ul > li > ul > li:nth-child(1) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#accountNav > ul > li > ul > li:nth-child(1) > a`, but never found it.\n    at Dashboard.go_to_Dashboard_From_Menu (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a11_BookEvent_Cancel_FDashboard.spec.js:343:10)\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a11_BookEvent_Cancel_FDashboard.spec.js:264:15)",
+                "diff": null
+              },
+              "uuid": "201c26ae-80f5-4023-9804-a0d7f798d753",
+              "parentUUID": "908315c2-1430-475d-8aa7-74e95d001e01",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book and cancel an event from Seeker Dashboard",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Book and cancel an event from Seeker Dashboard",
+              "timedOut": null,
+              "duration": 17671,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\nhomePage.fill_Email('horcosio@gmail.com');\nhomePage.fill_Password('perrodelmal');\nhomePage.submit_Credentials();\ncy.wait(2000);\nguidesPage.select_Guide_Tab_when_Login();\nguidesPage.perform_a_Search('guide tester');\ncy.xpath(\"//a[.='guide tester stage']\").click();\ncy.scrollTo(0, 600);\ncy.get('#w0 > div > div.col-md-3.vertical-align.col-xs-6.sm-block').click();\neventDetailPage.book_Event_from_EventDetail();\ndashboard.go_to_Dashboard_From_Menu();\ncy.wait(3000);\ndashboard.cancel_Event_As_Seeker();\ndashboard.confirm_Cancelation_From_Dashboard();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `undefined`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `undefined`, but never found it.\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a11_BookEvent_Cancel_FDashboard.spec.js:283:8)",
+                "diff": null
+              },
+              "uuid": "bda57878-485e-489d-be04-f0d0420dda11",
+              "parentUUID": "908315c2-1430-475d-8aa7-74e95d001e01",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Guide delete the Event from his Dashboard",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Guide delete the Event from his Dashboard",
+              "timedOut": null,
+              "duration": 12659,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\nhomePage.fill_Email('guide@tester1.com');\nhomePage.fill_Password('perrodelmal');\nhomePage.submit_Credentials();\ndashboard.go_to_Dashboard_From_Menu();\ncy.wait(3000);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#accountNav > ul > li > ul > li:nth-child(1) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#accountNav > ul > li > ul > li:nth-child(1) > a`, but never found it.\n    at Dashboard.go_to_Dashboard_From_Menu (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a11_BookEvent_Cancel_FDashboard.spec.js:343:10)\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a11_BookEvent_Cancel_FDashboard.spec.js:298:15)",
+                "diff": null
+              },
+              "uuid": "e11db959-f020-406a-ae65-376069ec836c",
+              "parentUUID": "908315c2-1430-475d-8aa7-74e95d001e01",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "201c26ae-80f5-4023-9804-a0d7f798d753",
+            "bda57878-485e-489d-be04-f0d0420dda11",
+            "e11db959-f020-406a-ae65-376069ec836c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 45028,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

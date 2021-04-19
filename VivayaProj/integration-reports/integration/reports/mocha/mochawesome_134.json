@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-03-31T00:41:34.798Z",
+    "end": "2021-03-31T00:43:44.086Z",
+    "duration": 129288,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "87500972-3d0c-4c94-aa6d-8d590b7de96c",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a03_VerifyWhatWeOfferPage.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a03_VerifyWhatWeOfferPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "79785b20-8c95-4e5a-9160-74f8fd5827e6",
+          "title": "Tests to confirm the correct rediection to Schedule and elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Schedule page as Logged out",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Schedule page as Logged out",
+              "timedOut": null,
+              "duration": 22612,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "whatWeOffer.select_WhatweOffer_When_Logout();\ncy.url().should('eq', 'https://stage.vivayalive.com/offerings');\ncy.get('.text-center > strong').should('contain', 'VIVAYA Offerings');",
+              "err": {},
+              "uuid": "6db11c25-de89-48e5-823a-b894eeaba198",
+              "parentUUID": "79785b20-8c95-4e5a-9160-74f8fd5827e6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Schedule Page as Logged in user",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Schedule Page as Logged in user",
+              "timedOut": null,
+              "duration": 60578,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nwhatWeOffer.select_WhatweOffer_When_Login();\ncy.url().should('eq', 'https://stage.vivayalive.com/offerings');\ncy.get('.text-center > strong').should('contain', 'VIVAYA Offerings');",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Tests to confirm the correc...`",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.json` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n\nBecause this error occurred during a `after all` hook we are skipping the remaining tests in the current suite: `Tests to confirm the correc...`\n    at timedOutWaitingForPageLoad (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:158187:13)\n    at https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:158452:14\n    at tryCatcher (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:10765:23)\n    at https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:5887:41\n    at tryCatcher (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromise0 (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8802:10)\n    at Promise._settlePromises (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8878:18)\n    at _drainQueueStep (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:5472:12)\n    at _drainQueue (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:5465:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:5481:5)\n    at Async.drainQueues (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:5351:14)",
+                "diff": null
+              },
+              "uuid": "0a682e30-387c-4890-a659-2595237a6b5a",
+              "parentUUID": "79785b20-8c95-4e5a-9160-74f8fd5827e6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6db11c25-de89-48e5-823a-b894eeaba198"
+          ],
+          "failures": [
+            "0a682e30-387c-4890-a659-2595237a6b5a"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 83190,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

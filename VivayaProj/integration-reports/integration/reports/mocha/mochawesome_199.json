@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 1,
+    "failures": 0,
+    "start": "2021-04-07T16:54:11.812Z",
+    "end": "2021-04-07T16:55:25.309Z",
+    "duration": 73497,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 33.33333333333333,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "766e74fc-ce16-4440-8814-b747df1f921f",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a12_BookEventfromHome.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a12_BookEventfromHome.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "818122d2-67d4-4d83-9054-055e04e1ac2b",
+          "title": "Booking Events",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event as a Guide",
+              "fullTitle": "Booking Events Create an Event as a Guide",
+              "timedOut": null,
+              "duration": 36450,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('class test');\ncy.wait(2000);\neventCreationPage.add_Description('This is a class test');\neventCreationPage.add_Current_Date();\neventCreationPage.custom_Start_Time(5);\neventCreationPage.press_Add();",
+              "err": {},
+              "uuid": "5fac97b5-f0aa-4696-8f51-a148d8ed1b76",
+              "parentUUID": "818122d2-67d4-4d83-9054-055e04e1ac2b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book the Last Event from Home page",
+              "fullTitle": "Booking Events Book the Last Event from Home page",
+              "timedOut": null,
+              "duration": 33784,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\nhomePage.go_Home();\ncy.scrollTo(0, 1300);\nhomePage.select_First_Event_Upcoming_Section(); //eventDetailPage.book_Event_from_EventDetail()\ncy.wait(2000);\neventDetailPage.cancel_Event_from_EventDetail();\neventDetailPage.confirm_Cancelation_from_EventDetail();",
+              "err": {},
+              "uuid": "9c6ec51b-53c3-451c-b410-4ee0714bf0c0",
+              "parentUUID": "818122d2-67d4-4d83-9054-055e04e1ac2b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Guide delete the Event from his Dashboard",
+              "fullTitle": "Booking Events Guide delete the Event from his Dashboard",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "daa313f6-e37c-4987-9057-7fc548cbecbc",
+              "parentUUID": "818122d2-67d4-4d83-9054-055e04e1ac2b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5fac97b5-f0aa-4696-8f51-a148d8ed1b76",
+            "9c6ec51b-53c3-451c-b410-4ee0714bf0c0"
+          ],
+          "failures": [],
+          "pending": [
+            "daa313f6-e37c-4987-9057-7fc548cbecbc"
+          ],
+          "skipped": [],
+          "duration": 70234,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

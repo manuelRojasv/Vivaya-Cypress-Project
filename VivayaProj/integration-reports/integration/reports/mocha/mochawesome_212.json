@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-08T21:43:33.060Z",
+    "end": "2021-04-08T21:43:33.452Z",
+    "duration": 392,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "da77bc85-c5d6-4eb5-839d-ba329e8fc51f",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/API/login.spec.js",
+      "file": "cypress/integration/Tests/API/login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6be623f9-ba6b-4663-9ba2-b603c069501a",
+          "title": "test API",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "first request",
+              "fullTitle": "test API first request",
+              "timedOut": null,
+              "duration": 324,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('http://jsonplaceholder.typicode.com/todos').its('headers').its('content-type').should('include', 'application/json');",
+              "err": {},
+              "uuid": "9275bc65-1d67-4dbd-a1bf-80860a77bc73",
+              "parentUUID": "6be623f9-ba6b-4663-9ba2-b603c069501a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9275bc65-1d67-4dbd-a1bf-80860a77bc73"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 324,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

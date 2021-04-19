@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-27T01:41:02.108Z",
+    "end": "2021-03-27T01:41:28.227Z",
+    "duration": 26119,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "03ea96e9-554d-4f2c-ab99-8c58e4169180",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a06_VerifyBottomBar.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a06_VerifyBottomBar.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "acb5eabd-ab59-42a0-9043-9dea1d3897ae",
+          "title": "Tests to confirm the correct rediection to Schedule and elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify About Page",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify About Page",
+              "timedOut": null,
+              "duration": 7680,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo('bottom');\nbottomBar.select_About_Link();\ncy.url().should('eq', 'https://stage.vivayalive.com/about');\ncy.get('#banner').should('be.visible');\ncy.get('.orange-text-color').should('contain', 'VIVAYA is the first interactive live-streaming Yoga and Wellness Center to share a vast array of holistic practices like yoga, meditation, nutrition, healing arts and coaching.');\ncy.get('.about-page-jumbotron > picture > .lazy').should('be.visible');\ncy.get(':nth-child(2) > .col-md-offset-2 > picture > .lazy').should('be.visible');\ncy.get(':nth-child(2) > :nth-child(2) > picture > .lazy').should('be.visible');\ncy.get(':nth-child(5) > .col-md-offset-2 > picture > .lazy').should('be.visible');\ncy.get(':nth-child(5) > :nth-child(2) > picture > .lazy').should('be.visible');",
+              "err": {},
+              "uuid": "9cc9e50f-50b2-4e43-bb4b-9fc6fa221fc8",
+              "parentUUID": "acb5eabd-ab59-42a0-9043-9dea1d3897ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Become a Guide Link",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Become a Guide Link",
+              "timedOut": null,
+              "duration": 5290,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo('bottom');\nbottomBar.select_BecomeAGuide_Link();\ncy.url().should('eq', 'https://stage.vivayalive.com/become-a-guide');\ncy.get('.col-md-9 > .text-blue').should('contain', 'YOUR NEW HOME FOR LIVE-STREAMING YOGA AND WELLNESS CLASSES, WORKSHOPS AND 1-1 SESSIONS');\ncy.get('.bag-button > .btn').should('be.visible');\ncy.get('.become-list > h2.text-center').should('contain', 'We created VIVAYA for exceptional yogis, teachers and healers like you and we would be honored to have you on board!');\ncy.get('.container > h2.text-center').should('contain', 'FAQs');",
+              "err": {},
+              "uuid": "b5aff6c7-2a09-4677-822f-d90dc8edfeee",
+              "parentUUID": "acb5eabd-ab59-42a0-9043-9dea1d3897ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Workshops link",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Workshops link",
+              "timedOut": null,
+              "duration": 5897,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo('bottom');\nbottomBar.select_Worshops_Link();\ncy.url().should('eq', 'https://stage.vivayalive.com/workshops');\ncy.get('#banner').should('contain', 'Find your next VIVAYA Workshop');",
+              "err": {},
+              "uuid": "345f31f0-960b-4b90-b54f-b1333371cb44",
+              "parentUUID": "acb5eabd-ab59-42a0-9043-9dea1d3897ae",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Seminars link",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Seminars link",
+              "timedOut": null,
+              "duration": 4238,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.scrollTo('bottom');\nbottomBar.select_Seminars_Link();\ncy.url().should('eq', 'https://stage.vivayalive.com/seminars');\ncy.get('#banner').should('contain', 'Seminars');",
+              "err": {},
+              "uuid": "140b5d6e-4dc9-4415-903a-ca805713e9ca",
+              "parentUUID": "acb5eabd-ab59-42a0-9043-9dea1d3897ae",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9cc9e50f-50b2-4e43-bb4b-9fc6fa221fc8",
+            "b5aff6c7-2a09-4677-822f-d90dc8edfeee",
+            "345f31f0-960b-4b90-b54f-b1333371cb44",
+            "140b5d6e-4dc9-4415-903a-ca805713e9ca"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23105,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

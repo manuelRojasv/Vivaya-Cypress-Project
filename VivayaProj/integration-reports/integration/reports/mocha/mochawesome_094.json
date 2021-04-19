@@ -1,0 +1,219 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 7,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-30T17:03:27.398Z",
+    "end": "2021-03-30T17:06:39.866Z",
+    "duration": 192468,
+    "testsRegistered": 7,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5bb4ae7b-fcfd-46b2-8c1a-b114b8c76481",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a14_BuyPackage.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a14_BuyPackage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6ba59e7c-7669-43f8-816a-141e98092663",
+          "title": "Buy Plans from membership",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Buy Monthly 3 Pack Membership",
+              "fullTitle": "Buy Plans from membership Buy Monthly 3 Pack Membership",
+              "timedOut": null,
+              "duration": 29406,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\nmembershipPage.select_Subscribe_3Pack();\ncy.wait(3000);\ncy.get('#checkout-form > div:nth-child(2) > div:nth-child(2) > h4').contains('Monthly 3 Pack Membership').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {},
+              "uuid": "aab24534-0591-42cc-926c-63c0365c7592",
+              "parentUUID": "6ba59e7c-7669-43f8-816a-141e98092663",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy Monthly 5 Pack Membership",
+              "fullTitle": "Buy Plans from membership Buy Monthly 5 Pack Membership",
+              "timedOut": null,
+              "duration": 29504,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\nmembershipPage.select_Subscribe_5Pack();\ncy.wait(3000);\ncy.get('#checkout-form > div:nth-child(2) > div:nth-child(2) > h4').contains('Monthly 5 Pack Membership').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {},
+              "uuid": "77c0a25e-e157-4f04-90d7-2ba616d6e6c6",
+              "parentUUID": "6ba59e7c-7669-43f8-816a-141e98092663",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy Monthly Unlimited Membership",
+              "fullTitle": "Buy Plans from membership Buy Monthly Unlimited Membership",
+              "timedOut": null,
+              "duration": 25194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\nmembershipPage.select_Monthly_Unlimited();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('MONTHLY UNLIMITED MEMBERSHIP').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {},
+              "uuid": "b66296fc-ab02-427a-b21f-a42f7df012f5",
+              "parentUUID": "6ba59e7c-7669-43f8-816a-141e98092663",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy Annual Unlimited Membership",
+              "fullTitle": "Buy Plans from membership Buy Annual Unlimited Membership",
+              "timedOut": null,
+              "duration": 27786,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\nmembershipPage.select_Annual_Unlimited();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('ANNUAL UNLIMITED MEMBERSHIP').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {},
+              "uuid": "9b35d948-9776-4fa6-88f6-da683c07ea6f",
+              "parentUUID": "6ba59e7c-7669-43f8-816a-141e98092663",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy 1 class",
+              "fullTitle": "Buy Plans from membership Buy 1 class",
+              "timedOut": null,
+              "duration": 25986,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\ncy.scrollTo(0, 300);\nmembershipPage.select_Buy_1Class();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('1 CLASS').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {},
+              "uuid": "0acc4f56-3fcb-4a6a-82a1-43f33a8f825e",
+              "parentUUID": "6ba59e7c-7669-43f8-816a-141e98092663",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy 5 Package",
+              "fullTitle": "Buy Plans from membership Buy 5 Package",
+              "timedOut": null,
+              "duration": 25692,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\ncy.scrollTo(0, 300);\nmembershipPage.select_Buy_5Pack();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('5 PACK').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {},
+              "uuid": "5a9197d4-cc34-47c5-aa43-3e462cb112f2",
+              "parentUUID": "6ba59e7c-7669-43f8-816a-141e98092663",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy 10 Package",
+              "fullTitle": "Buy Plans from membership Buy 10 Package",
+              "timedOut": null,
+              "duration": 25024,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\ncy.scrollTo(0, 300);\nmembershipPage.select_Buy_10Pack();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('10 PACK').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {},
+              "uuid": "731955ee-5b8c-4540-ba31-e92a2159740d",
+              "parentUUID": "6ba59e7c-7669-43f8-816a-141e98092663",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aab24534-0591-42cc-926c-63c0365c7592",
+            "77c0a25e-e157-4f04-90d7-2ba616d6e6c6",
+            "b66296fc-ab02-427a-b21f-a42f7df012f5",
+            "9b35d948-9776-4fa6-88f6-da683c07ea6f",
+            "0acc4f56-3fcb-4a6a-82a1-43f33a8f825e",
+            "5a9197d4-cc34-47c5-aa43-3e462cb112f2",
+            "731955ee-5b8c-4540-ba31-e92a2159740d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 188592,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

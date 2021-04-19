@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-30T17:01:51.151Z",
+    "end": "2021-03-30T17:03:14.455Z",
+    "duration": 83304,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d6c61adc-cf4b-4dd1-aeed-3c24acd9b0bc",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a13_EventisStarted.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a13_EventisStarted.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bbd2ac73-1fc4-46e6-b8fc-b089be0427f6",
+          "title": "Start event from Guide side and Join from Seeker side",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Start Event as Guide",
+              "fullTitle": "Start event from Guide side and Join from Seeker side Start Event as Guide",
+              "timedOut": null,
+              "duration": 25710,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(8000);\ndashboard.press_Start_Event_Button();\ncy.xpath('//*[@id=\"fbStart\"]').should('contain', 'Rejoin Event');\nhomePage.logout_Account();",
+              "err": {},
+              "uuid": "9ecb5735-c9cc-456e-a9e9-d7f07812a769",
+              "parentUUID": "bbd2ac73-1fc4-46e6-b8fc-b089be0427f6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Seeker Book and Join Event",
+              "fullTitle": "Start event from Guide side and Join from Seeker side Seeker Book and Join Event",
+              "timedOut": null,
+              "duration": 54754,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\nhomePage.go_Home();\ncy.scrollTo(0, 1300);\nhomePage.select_First_Event_Upcoming_Section();\nhomePage.go_Home();\ncy.scrollTo(0, 1300);\ncy.wait(6000);\nhomePage.join_Event_From_Home();\ncy.get('.join-event').should('contain', 'Join Event');",
+              "err": {},
+              "uuid": "dd833c92-7cbf-49cc-ae46-1a054993fa50",
+              "parentUUID": "bbd2ac73-1fc4-46e6-b8fc-b089be0427f6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9ecb5735-c9cc-456e-a9e9-d7f07812a769",
+            "dd833c92-7cbf-49cc-ae46-1a054993fa50"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 80464,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

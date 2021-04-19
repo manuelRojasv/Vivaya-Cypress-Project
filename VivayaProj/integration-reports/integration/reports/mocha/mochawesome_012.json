@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 3,
+    "failures": -2,
+    "start": "2021-03-27T01:44:49.949Z",
+    "end": "2021-03-27T01:45:10.030Z",
+    "duration": 20081,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 75,
+    "other": 3,
+    "hasOther": true,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "5d836e93-3fa3-4e63-8d6e-4d428ea8a051",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a10_BookCancelEventfromGuidePage.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a10_BookCancelEventfromGuidePage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b865a40e-cfd4-43c0-94ac-0734f9b52e52",
+          "title": "Booking Event from Guide",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event as a Guide",
+              "fullTitle": "Booking Event from Guide Create an Event as a Guide",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "6b898de6-e277-420c-8ae6-3e940f21dc4c",
+              "parentUUID": "b865a40e-cfd4-43c0-94ac-0734f9b52e52",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book and cancel an event from Guide profile page",
+              "fullTitle": "Booking Event from Guide Book and cancel an event from Guide profile page",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "f30ae267-ccf0-4fcb-a5f1-e0118b99b053",
+              "parentUUID": "b865a40e-cfd4-43c0-94ac-0734f9b52e52",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book an cancel an event from Schedule page",
+              "fullTitle": "Booking Event from Guide Book an cancel an event from Schedule page",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "3b04300a-d3e9-4c6d-93e4-43eaa587ca5a",
+              "parentUUID": "b865a40e-cfd4-43c0-94ac-0734f9b52e52",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Guide delete the Event from his Dashboard",
+              "fullTitle": "Booking Event from Guide Guide delete the Event from his Dashboard",
+              "timedOut": null,
+              "duration": 17760,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\nhomePage.fill_Email('guide@tester1.com');\nhomePage.fill_Password('perrodelmal');\nhomePage.submit_Credentials();\ndashboard.go_to_Dashboard_From_Menu();\ncy.wait(3000);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#accountNav > ul > li > ul > li:nth-child(1) > a`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#accountNav > ul > li > ul > li:nth-child(1) > a`, but never found it.\n    at Dashboard.go_to_Dashboard_From_Menu (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a10_BookCancelEventfromGuidePage.spec.js:353:10)\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a10_BookCancelEventfromGuidePage.spec.js:308:15)",
+                "diff": null
+              },
+              "uuid": "daaa1c90-45e7-48e6-b066-b5d33d2ee229",
+              "parentUUID": "b865a40e-cfd4-43c0-94ac-0734f9b52e52",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "daaa1c90-45e7-48e6-b066-b5d33d2ee229"
+          ],
+          "pending": [
+            "6b898de6-e277-420c-8ae6-3e940f21dc4c",
+            "f30ae267-ccf0-4fcb-a5f1-e0118b99b053",
+            "3b04300a-d3e9-4c6d-93e4-43eaa587ca5a"
+          ],
+          "skipped": [],
+          "duration": 17760,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

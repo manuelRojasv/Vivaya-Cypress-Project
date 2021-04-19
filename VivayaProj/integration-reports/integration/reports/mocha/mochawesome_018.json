@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 1,
+    "failures": 0,
+    "start": "2021-03-27T01:52:46.485Z",
+    "end": "2021-03-27T01:53:01.855Z",
+    "duration": 15370,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "4fc0c1c1-7213-47ed-9972-f34ddab8c911",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a19_CreateRepeatedEvent.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a19_CreateRepeatedEvent.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e9dc7162-9fec-4af4-9423-86095a71639e",
+          "title": "Events Creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a recurrent Daily Class",
+              "fullTitle": "Events Creation Create a recurrent Daily Class",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "8dd91d05-bd2c-4905-860b-b8d5fac5eca4",
+              "parentUUID": "e9dc7162-9fec-4af4-9423-86095a71639e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create a recurrent Weekly Class",
+              "fullTitle": "Events Creation Create a recurrent Weekly Class",
+              "timedOut": null,
+              "duration": 13187,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "dashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('Class1');\ncy.wait(2000);\neventCreationPage.add_Description('This is a Test Class');\neventCreationPage.select_Repeater_Checkbox();\neventCreationPage.add_Custom_Start_Date(3);\neventCreationPage.add_Custom_End_Date(10);\neventCreationPage.select_Repeater_Weekly();\neventCreationPage.press_Add();\ncy.wait(5000);\ndashboard.cancel_Several_Events_AtOnce();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#accountNav > ul > li > ul > li:nth-child(1) > a`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Events Creation`",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#accountNav > ul > li > ul > li:nth-child(1) > a`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Events Creation`\n    at Dashboard.go_to_Dashboard_From_Menu (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a19_CreateRepeatedEvent.spec.js:323:10)\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a19_CreateRepeatedEvent.spec.js:248:15)",
+                "diff": null
+              },
+              "uuid": "3f77522f-e660-4f19-93bb-7689ebc5875b",
+              "parentUUID": "e9dc7162-9fec-4af4-9423-86095a71639e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3f77522f-e660-4f19-93bb-7689ebc5875b"
+          ],
+          "pending": [
+            "8dd91d05-bd2c-4905-860b-b8d5fac5eca4"
+          ],
+          "skipped": [],
+          "duration": 13187,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

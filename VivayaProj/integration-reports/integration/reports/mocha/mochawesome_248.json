@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-09T22:35:53.767Z",
+    "end": "2021-04-09T22:38:17.525Z",
+    "duration": 143758,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4f31d02d-0e75-49c3-b6b7-5888b46718f6",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a09_VerifyFirstResponder.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a09_VerifyFirstResponder.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f89a8b9d-4dc9-4189-8bb7-2c72f0def43a",
+          "title": "Tests to confirm the correct rediection to Schedule and elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the First Responder page as Logged out",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the First Responder page as Logged out",
+              "timedOut": null,
+              "duration": 23799,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "firstResponderPage.select_FirstResponders_When_LoggedOut();\ncy.url().should('eq', 'https://stage.vivayalive.com/first-responders');\ncy.get('.free-months > h2').should('contain', 'Our Gift of Gratitude to First Responders, Healthcare and Emergency Workers');\ncy.get('.free-months > :nth-child(3)').should('contain', 'VIVAYA is offering 2 FREE months of Unlimited Access to all VIVAYA Classes for First Responders, Healthcare and Emergency Workers.');\nfirstResponderPage.select_Register_Button();\ncy.url().should('eq', 'https://stage.vivayalive.com/signup/number?isFirstResponder=1');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://stage.vivayalive.com/signup/seeker/form-b?isFirstResponder=1' to equal 'https://stage.vivayalive.com/signup/number?isFirstResponder=1'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://stage.vivayalive.com/signup/seeker/form-b?isFirstResponder=1' to equal 'https://stage.vivayalive.com/signup/number?isFirstResponder=1'\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Basic%20Tests/a09_VerifyFirstResponder.spec.js:173:14)",
+                "diff": "- 'https://stage.vivayalive.com/signup/seeker/form-b?isFirstResponder=1'\n+ 'https://stage.vivayalive.com/signup/number?isFirstResponder=1'\n"
+              },
+              "uuid": "3f12d5c2-fb2c-4067-b169-7892ebafccaa",
+              "parentUUID": "f89a8b9d-4dc9-4189-8bb7-2c72f0def43a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the First Responder Page as Logged in Guide",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the First Responder Page as Logged in Guide",
+              "timedOut": null,
+              "duration": 34592,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nfirstResponderPage.select_FirstResponders_When_LogIn();\ncy.url().should('eq', 'https://stage.vivayalive.com/first-responders');\ncy.get('.free-months > h2').should('contain', 'Our Gift of Gratitude to First Responders, Healthcare and Emergency Workers');\ncy.get('.free-months > :nth-child(3)').should('contain', 'VIVAYA is offering 2 FREE months of Unlimited Access to all VIVAYA Classes for First Responders, Healthcare and Emergency Workers.');\nfirstResponderPage.select_Register_Button();\ncy.get('#appModal > div > div').should('be.visible');",
+              "err": {},
+              "uuid": "8871b7f5-bc3f-4327-bcda-1c61578ae199",
+              "parentUUID": "f89a8b9d-4dc9-4189-8bb7-2c72f0def43a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the First Responder Page as Logged in Guide",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the First Responder Page as Logged in Guide",
+              "timedOut": null,
+              "duration": 29085,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nfirstResponderPage.select_FirstResponders_When_LogIn();\ncy.url().should('eq', 'https://stage.vivayalive.com/first-responders');\ncy.get('.free-months > h2').should('contain', 'Our Gift of Gratitude to First Responders, Healthcare and Emergency Workers');\ncy.get('.free-months > :nth-child(3)').should('contain', 'VIVAYA is offering 2 FREE months of Unlimited Access to all VIVAYA Classes for First Responders, Healthcare and Emergency Workers.');\nfirstResponderPage.select_Register_Button();\ncy.get('#appModal > div > div').should('be.visible');",
+              "err": {},
+              "uuid": "d3fe8fab-3e0b-46cb-b376-14e7da76c4c5",
+              "parentUUID": "f89a8b9d-4dc9-4189-8bb7-2c72f0def43a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8871b7f5-bc3f-4327-bcda-1c61578ae199",
+            "d3fe8fab-3e0b-46cb-b376-14e7da76c4c5"
+          ],
+          "failures": [
+            "3f12d5c2-fb2c-4067-b169-7892ebafccaa"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 87476,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-08T21:48:04.703Z",
+    "end": "2021-04-08T21:50:17.778Z",
+    "duration": 133075,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "37006d7f-c8c4-4953-a546-aab6151b2270",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a07_VerifyDashboard.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a07_VerifyDashboard.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d402ce76-8547-4321-ac3d-0271a7b802a2",
+          "title": "Verify the Elements within Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test links within Guide Dashboard",
+              "fullTitle": "Verify the Elements within Dashboard Test links within Guide Dashboard",
+              "timedOut": null,
+              "duration": 69796,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashBoard.select_UpcomingEvents();\ncy.url().should('eq', 'https://stage.vivayalive.com/dashboard/upcoming');\ncy.go('back');\ndashBoard.select_One_One_Availability();\ncy.url().should('eq', 'https://stage.vivayalive.com/dashboard/calendar');\ncy.go('back');\ndashBoard.select_Add_Seminar();\ncy.url().should('eq', 'https://stage.vivayalive.com/seminars/add');\ncy.go('back');\ndashBoard.select_View_FullClass_History();\ncy.url().should('eq', 'https://stage.vivayalive.com/dashboard/history');\ncy.go('back');\ndashBoard.select_View_Public_Profile();\ncy.url().should('eq', 'https://stage.vivayalive.com/guides/1222/manu-rex');\ncy.go('back');\ndashBoard.select_Contact_Vivaya();\ncy.url().should('eq', 'https://stage.vivayalive.com/site/contact');\ncy.go('back');\ndashBoard.select_Write_Blog();\ncy.url().should('eq', 'https://stage.vivayalive.com/blog/write');\ncy.go('back');\ndashBoard.select_Edit_My_Offerings();\ncy.url().should('eq', 'https://stage.vivayalive.com/account/offerings');\ncy.go('back');\ndashBoard.select_Update_LInsurance();\ncy.url().should('eq', 'https://stage.vivayalive.com/account/liability-insurance');\ncy.go('back');\ndashBoard.select_Edit_Password();\ncy.url().should('eq', 'https://stage.vivayalive.com/account');\ncy.go('back');\ndashBoard.select_Edit_Contact_Info();\ncy.url().should('eq', 'https://stage.vivayalive.com/account/profile');\ncy.go('back');\ndashBoard.select_Edit_Profile_Left_Section();\ncy.url().should('eq', 'https://stage.vivayalive.com/account');\ncy.go('back');\ndashBoard.select_Public_Profile_Left_Section();\ncy.url().should('eq', 'https://stage.vivayalive.com/guides/1222/manu-rex'); //cy.go('back')\n//dashBoard.select_Seeker_Account_Left_Section()\n//cy.url().should('eq', 'https://stage.vivayalive.com/signup/add-seeker-account-from-guide')",
+              "err": {},
+              "uuid": "1a0ff00e-71a4-49e2-bbbe-7598b4d35da8",
+              "parentUUID": "d402ce76-8547-4321-ac3d-0271a7b802a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify links within Seeker Dashboard",
+              "fullTitle": "Verify the Elements within Dashboard Verify links within Seeker Dashboard",
+              "timedOut": null,
+              "duration": 53699,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ndashBoard.select_Book_More();\ncy.url().should('eq', 'https://stage.vivayalive.com/schedule');\ncy.go('back');\ndashBoard.select_View_FullClass_History();\ncy.url().should('eq', 'https://stage.vivayalive.com/dashboard/history');\ncy.go('back');\ndashBoard.select_Shopping_Cart();\ncy.url().should('eq', 'https://stage.vivayalive.com/cart');\ncy.go('back');\ndashBoard.select_My_Password();\ncy.url().should('eq', 'https://stage.vivayalive.com/account');\ncy.go('back');\ndashBoard.select_Contact_Vivaya_Seeker();\ncy.url().should('eq', 'https://stage.vivayalive.com/site/contact');\ncy.go('back');\ndashBoard.select_My_Referral();\ncy.url().should('eq', 'https://stage.vivayalive.com/dashboard/referral-detail/4206');\ncy.go('back');\ndashBoard.select_My_Account_Seeker();\ncy.url().should('eq', 'https://stage.vivayalive.com/account');\ncy.go('back');\ndashBoard.select_Payment_Info();\ncy.url().should('eq', 'https://stage.vivayalive.com/account/edit-cc');\ncy.go('back');\ndashBoard.select_Edit_Profile_Left_Section_Seeker();\ncy.url().should('eq', 'https://stage.vivayalive.com/account');",
+              "err": {},
+              "uuid": "09a1e63d-43dc-4ee4-901e-f1aa86ebc558",
+              "parentUUID": "d402ce76-8547-4321-ac3d-0271a7b802a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1a0ff00e-71a4-49e2-bbbe-7598b4d35da8",
+            "09a1e63d-43dc-4ee4-901e-f1aa86ebc558"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 123495,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

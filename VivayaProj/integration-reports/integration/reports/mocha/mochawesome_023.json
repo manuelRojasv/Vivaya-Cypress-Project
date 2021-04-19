@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 1,
+    "failures": 1,
+    "start": "2021-03-27T01:57:16.044Z",
+    "end": "2021-03-27T01:57:53.223Z",
+    "duration": 37179,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 33.33333333333333,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "67a45b31-8ada-40d0-acf4-11f3135004cf",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Seminars/a20_AddIndividualEventToCart.spec.js",
+      "file": "cypress/integration/Tests/Seminars/a20_AddIndividualEventToCart.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a092282c-3db6-413f-be31-e9ddba218e1e",
+          "title": "Seminar Creation, Cancelation and Seminar Event creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create Seminar",
+              "fullTitle": "Seminar Creation, Cancelation and Seminar Event creation Create Seminar",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "9eb0241a-1109-4331-ac86-0d30eae1bad3",
+              "parentUUID": "a092282c-3db6-413f-be31-e9ddba218e1e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add seminar Event to cart and remove it",
+              "fullTitle": "Seminar Creation, Cancelation and Seminar Event creation Add seminar Event to cart and remove it",
+              "timedOut": null,
+              "duration": 20582,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\ncy.get('.col-lg-8 > #footernav > :nth-child(3) > a').click();\ncy.get(':nth-child(1) > .n').click();\ncy.xpath(\"//div[@class='list-view']/div[1]//a[.='Buy Workshop']\").click();\ncy.get('.product > :nth-child(2) > h4').should('contain.text', 'Workshop: Seminar Event test one');\ncy.get('.remove-button').click();\ncy.wait(3000);\ncy.get('.btn-success').click();\ncy.get('#w0-success-0').should('contain.text', '\\n×\\n\\nItem has been removed from cart.\\n\\n');\ncy.get('.cart > .text-center').should('contain.text', 'There are no items in your cart.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .n`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `:nth-child(1) > .n`, but never found it.\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Seminars/a20_AddIndividualEventToCart.spec.js:300:8)",
+                "diff": null
+              },
+              "uuid": "4e0ecbed-367c-4e2b-9913-711148d10c99",
+              "parentUUID": "a092282c-3db6-413f-be31-e9ddba218e1e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete Seminar from Guide Dashboard",
+              "fullTitle": "Seminar Creation, Cancelation and Seminar Event creation Delete Seminar from Guide Dashboard",
+              "timedOut": null,
+              "duration": 14552,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\nseminars.select_Cancel_Seminar();\ncy.get('#w0-success-0').should('contain', 'Seminar has been cancelled.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.cancel-seminar`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.cancel-seminar`, but never found it.\n    at SeminarCreationPage.select_Cancel_Seminar (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Seminars/a20_AddIndividualEventToCart.spec.js:722:10)\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Seminars/a20_AddIndividualEventToCart.spec.js:314:14)",
+                "diff": null
+              },
+              "uuid": "c45590e4-e832-4326-9a04-eed76ffff2d5",
+              "parentUUID": "a092282c-3db6-413f-be31-e9ddba218e1e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4e0ecbed-367c-4e2b-9913-711148d10c99",
+            "c45590e4-e832-4326-9a04-eed76ffff2d5"
+          ],
+          "pending": [
+            "9eb0241a-1109-4331-ac86-0d30eae1bad3"
+          ],
+          "skipped": [],
+          "duration": 35134,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

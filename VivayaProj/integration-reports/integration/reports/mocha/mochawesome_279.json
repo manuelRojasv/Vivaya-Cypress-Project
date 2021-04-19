@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 1,
+    "failures": -1,
+    "start": "2021-04-14T01:01:21.628Z",
+    "end": "2021-04-14T01:03:12.321Z",
+    "duration": 110693,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 25,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "38ecebcb-5759-4744-8780-0067103672e0",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a10_BookCancelEventfromGuidePage.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a10_BookCancelEventfromGuidePage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "33f0f918-ef08-45e6-8e08-6a5d9acf6781",
+          "title": "Booking Event from Guide",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event as a Guide",
+              "fullTitle": "Booking Event from Guide Create an Event as a Guide",
+              "timedOut": null,
+              "duration": 43884,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('class test');\ncy.wait(2000);\neventCreationPage.add_Description('This is a class test');\neventCreationPage.add_Custom_Number_Of_Days(1);\neventCreationPage.custom_Start_Time(10);\neventCreationPage.press_Add();\nhomePage.logout_Account();",
+              "err": {},
+              "uuid": "3ce2288d-3a63-4c50-877f-9d0735176073",
+              "parentUUID": "33f0f918-ef08-45e6-8e08-6a5d9acf6781",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book and cancel an event from Seeker",
+              "fullTitle": "Booking Event from Guide Book and cancel an event from Seeker",
+              "timedOut": null,
+              "duration": 37818,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nguidesPage.select_Guide_Tab_when_Login();\nguidesPage.perform_a_Search('manu rex');\ncy.wait(3000);\ncy.get('#w0 > div.row > div > a.img > img').click(); //cy.xpath(\"//a[.='guide manu rex']\").click()\ncy.scrollTo(0, 600);\ncy.get('#w0 > div > div.col-md-3.vertical-align.col-xs-6.sm-block').click();\neventDetailPage.book_Event_from_EventDetail();\neventDetailPage.cancel_Event_from_EventDetail();\neventDetailPage.confirm_Cancelation_from_EventDetail();",
+              "err": {},
+              "uuid": "4660c602-767b-4fab-8096-9aeb28fc2abf",
+              "parentUUID": "33f0f918-ef08-45e6-8e08-6a5d9acf6781",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book an cancel an event from Schedule page",
+              "fullTitle": "Booking Event from Guide Book an cancel an event from Schedule page",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "6b539dfc-3f5e-44a0-9ba3-692b1efda8d1",
+              "parentUUID": "33f0f918-ef08-45e6-8e08-6a5d9acf6781",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Guide delete the Event from his Dashboard",
+              "fullTitle": "Booking Event from Guide Guide delete the Event from his Dashboard",
+              "timedOut": null,
+              "duration": 25372,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.go_to_Dashboard_From_Menu();\ncy.wait(4000);\ncy.scrollTo(0, 100);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {},
+              "uuid": "b3b90097-7522-4f95-b76e-b8ede82fb9f3",
+              "parentUUID": "33f0f918-ef08-45e6-8e08-6a5d9acf6781",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3ce2288d-3a63-4c50-877f-9d0735176073",
+            "4660c602-767b-4fab-8096-9aeb28fc2abf",
+            "b3b90097-7522-4f95-b76e-b8ede82fb9f3"
+          ],
+          "failures": [],
+          "pending": [
+            "6b539dfc-3f5e-44a0-9ba3-692b1efda8d1"
+          ],
+          "skipped": [],
+          "duration": 107074,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

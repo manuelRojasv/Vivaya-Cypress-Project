@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-30T20:04:50.941Z",
+    "end": "2021-03-30T20:05:07.498Z",
+    "duration": 16557,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "949a5cc3-5dce-4e4a-9f28-66853f5c3d5b",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a05_VerifyBecomeAGuidePage.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a05_VerifyBecomeAGuidePage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fc8e1daa-b104-44fb-a752-5daae756e517",
+          "title": "Tests to confirm the correct rediection to Become a guide and some elements in the page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Schedule page as Logged out",
+              "fullTitle": "Tests to confirm the correct rediection to Become a guide and some elements in the page Verify the Schedule page as Logged out",
+              "timedOut": null,
+              "duration": 13690,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "becomeAGuide.select_Become_A_Guide_Page();\ncy.url().should('eq', 'https://stage.vivayalive.com/become-a-guide');\ncy.get('.col-md-9 > .text-blue').should('contain', 'YOUR NEW HOME FOR LIVE-STREAMING YOGA AND WELLNESS CLASSES, WORKSHOPS AND 1-1 SESSIONS');\ncy.get('.bag-button > .btn').should('be.visible');\ncy.get('.become-list > h2.text-center').should('contain', 'We created VIVAYA for exceptional yogis, teachers and healers like you and we would be honored to have you on board!');\ncy.get('.container > h2.text-center').should('contain', 'FAQs');",
+              "err": {},
+              "uuid": "31062d56-aaa3-4d6b-83db-3975639e052d",
+              "parentUUID": "fc8e1daa-b104-44fb-a752-5daae756e517",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "31062d56-aaa3-4d6b-83db-3975639e052d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13690,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

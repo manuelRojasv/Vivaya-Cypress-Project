@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-07T14:59:00.384Z",
+    "end": "2021-04-07T14:59:56.323Z",
+    "duration": 55939,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f5ac9722-4652-4757-9879-0ab935331039",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a15_SearchGuide.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a15_SearchGuide.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "984d7eda-2b81-4cb4-8db9-41078835f85f",
+          "title": "Search a Guide",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search a Guide Logged out",
+              "fullTitle": "Search a Guide Search a Guide Logged out",
+              "timedOut": null,
+              "duration": 22173,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "guidesPage.select_Guide_Tab();\nguidesPage.perform_a_Search('manu rex');\ncy.wait(3000);\ncy.get('#w0 > div.row > div > a.img > img').click();\ncy.get('h1').contains('manu rex');",
+              "err": {},
+              "uuid": "13b24cca-d6a6-4730-87fa-25c6563bbc8e",
+              "parentUUID": "984d7eda-2b81-4cb4-8db9-41078835f85f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search a guide with Loged in  User",
+              "fullTitle": "Search a Guide Search a guide with Loged in  User",
+              "timedOut": null,
+              "duration": 30327,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nguidesPage.select_Guide_Tab_when_Login();\nguidesPage.perform_a_Search('manu rex');\ncy.wait(3000);\ncy.get('#w0 > div.row > div > a.img > img').click();\ncy.get('h1').contains('manu rex');",
+              "err": {},
+              "uuid": "df6b6f1b-a6b6-4ab4-a9fe-60faeb715e8f",
+              "parentUUID": "984d7eda-2b81-4cb4-8db9-41078835f85f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "13b24cca-d6a6-4730-87fa-25c6563bbc8e",
+            "df6b6f1b-a6b6-4ab4-a9fe-60faeb715e8f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 52500,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

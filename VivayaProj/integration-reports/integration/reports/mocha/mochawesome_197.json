@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 1,
+    "failures": 0,
+    "start": "2021-04-07T16:50:22.164Z",
+    "end": "2021-04-07T16:52:32.735Z",
+    "duration": 130571,
+    "testsRegistered": 4,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 25,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "36f98c44-3f59-4502-9ab0-093934f541a2",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a10_BookCancelEventfromGuidePage.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a10_BookCancelEventfromGuidePage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "be5d2712-c6a4-4c69-8be5-1e2f672b6ed3",
+          "title": "Booking Event from Guide",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event as a Guide",
+              "fullTitle": "Booking Event from Guide Create an Event as a Guide",
+              "timedOut": null,
+              "duration": 55713,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('class test');\ncy.wait(2000);\neventCreationPage.add_Description('This is a class test');\neventCreationPage.add_Custom_Number_Of_Days(1);\neventCreationPage.custom_Start_Time(10);\neventCreationPage.press_Add();\nhomePage.logout_Account();",
+              "err": {},
+              "uuid": "1dcc6c89-8798-42bf-8485-be2ae6026564",
+              "parentUUID": "be5d2712-c6a4-4c69-8be5-1e2f672b6ed3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book and cancel an event from Seeker",
+              "fullTitle": "Booking Event from Guide Book and cancel an event from Seeker",
+              "timedOut": null,
+              "duration": 39806,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nguidesPage.select_Guide_Tab_when_Login();\nguidesPage.perform_a_Search('manu rex');\ncy.wait(3000);\ncy.get('#w0 > div.row > div > a.img > img').click(); //cy.xpath(\"//a[.='guide manu rex']\").click()\ncy.scrollTo(0, 600);\ncy.get('#w0 > div > div.col-md-3.vertical-align.col-xs-6.sm-block').click();\neventDetailPage.book_Event_from_EventDetail();\neventDetailPage.cancel_Event_from_EventDetail();\neventDetailPage.confirm_Cancelation_from_EventDetail();",
+              "err": {},
+              "uuid": "f937a480-9068-4b28-bacd-7a31be6d3b0e",
+              "parentUUID": "be5d2712-c6a4-4c69-8be5-1e2f672b6ed3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book an cancel an event from Schedule page",
+              "fullTitle": "Booking Event from Guide Book an cancel an event from Schedule page",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "985d96db-b59c-4012-a4d2-a5472dcd17da",
+              "parentUUID": "be5d2712-c6a4-4c69-8be5-1e2f672b6ed3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Guide delete the Event from his Dashboard",
+              "fullTitle": "Booking Event from Guide Guide delete the Event from his Dashboard",
+              "timedOut": null,
+              "duration": 31822,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.go_to_Dashboard_From_Menu();\ncy.wait(4000);\ncy.scrollTo(0, 100);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is detached from the DOM.\n\n`<a class=\" cancel-event\" href=\"/events/#\" data-href=\"/events/7770/cancel\">Cancel ...</a>`\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > `cy.get()`\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is detached from the DOM.\n\n`<a class=\" cancel-event\" href=\"/events/#\" data-href=\"/events/7770/cancel\">Cancel ...</a>`\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > `cy.get()`\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at $Cy.ensureAttached (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:141687:24)\n    at runAllChecks (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:130414:12)\n    at retryActionability (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:130491:16)\n    at tryCatcher (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:10747:23)\n    at Function.Promise.attempt.Promise.try (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8021:29)\n    at tryFn (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:146270:21)\n    at whenStable (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:146308:12)\n    at https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:145803:16\n    at tryCatcher (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:10747:23)\n    at Promise._settlePromiseFromHandler (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8682:31)\n    at Promise._settlePromise (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8739:18)\n    at Promise._settlePromise0 (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8784:10)\n    at Promise._settlePromises (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8864:18)\n    at Promise._fulfill (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:8808:18)\n    at https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:10422:46\nFrom Your Spec Code:\n    at Dashboard.cancel_Created_Event (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a10_BookCancelEventfromGuidePage.spec.js:332:29)\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a10_BookCancelEventfromGuidePage.spec.js:261:15)",
+                "diff": null
+              },
+              "uuid": "a6dcb199-9841-429f-bea2-15d86b57a136",
+              "parentUUID": "be5d2712-c6a4-4c69-8be5-1e2f672b6ed3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1dcc6c89-8798-42bf-8485-be2ae6026564",
+            "f937a480-9068-4b28-bacd-7a31be6d3b0e"
+          ],
+          "failures": [
+            "a6dcb199-9841-429f-bea2-15d86b57a136"
+          ],
+          "pending": [
+            "985d96db-b59c-4012-a4d2-a5472dcd17da"
+          ],
+          "skipped": [],
+          "duration": 127341,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

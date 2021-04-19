@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-09T22:45:14.753Z",
+    "end": "2021-04-09T22:50:18.677Z",
+    "duration": 303924,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6a6f94bf-f16a-4242-b60e-460e1d0ebbf0",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a11_BookEvent_Cancel_FDashboard.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a11_BookEvent_Cancel_FDashboard.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d3669b64-741e-42af-af3a-91a0ba1a3ee6",
+          "title": "Booking Event and Cancel the Event from Seeker Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event as a Guide",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Create an Event as a Guide",
+              "timedOut": null,
+              "duration": 48833,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('class test');\ncy.wait(2000);\neventCreationPage.add_Description('This is a class test');\neventCreationPage.add_Custom_Number_Of_Days(1);\neventCreationPage.custom_Start_Time(10);\neventCreationPage.press_Add();",
+              "err": {},
+              "uuid": "344c267f-3249-4803-bc1f-56ad3b530678",
+              "parentUUID": "d3669b64-741e-42af-af3a-91a0ba1a3ee6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book and cancel an event from Seeker Dashboard",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Book and cancel an event from Seeker Dashboard",
+              "timedOut": null,
+              "duration": 64564,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nguidesPage.select_Guide_Tab_when_Login();\nguidesPage.perform_a_Search('manu rex');\ncy.wait(3000);\ncy.get('#w0 > div.row > div > a.img > img').click();\ncy.scrollTo(0, 600);\ncy.get('#w0 > div > div.col-md-3.vertical-align.col-xs-6.sm-block').click();\neventDetailPage.book_Event_from_EventDetail();\ndashboard.go_to_Dashboard_From_Menu();\ncy.wait(3000);\ndashboard.cancel_Event_As_Seeker();\ndashboard.confirm_Cancelation_From_Dashboard();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `undefined`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `undefined`, but never found it.\n    at EventDetailPage.book_Event_from_EventDetail (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a11_BookEvent_Cancel_FDashboard.spec.js:606:8)\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a11_BookEvent_Cancel_FDashboard.spec.js:236:21)",
+                "diff": null
+              },
+              "uuid": "081ecc7a-7974-483c-9cd8-64c1cd6e8f3c",
+              "parentUUID": "d3669b64-741e-42af-af3a-91a0ba1a3ee6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Guide delete the Event from his Dashboard",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Guide delete the Event from his Dashboard",
+              "timedOut": null,
+              "duration": 37373,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {},
+              "uuid": "1dd5942c-b981-4a3d-b873-f4a7281502a1",
+              "parentUUID": "d3669b64-741e-42af-af3a-91a0ba1a3ee6",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "344c267f-3249-4803-bc1f-56ad3b530678",
+            "1dd5942c-b981-4a3d-b873-f4a7281502a1"
+          ],
+          "failures": [
+            "081ecc7a-7974-483c-9cd8-64c1cd6e8f3c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 150770,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

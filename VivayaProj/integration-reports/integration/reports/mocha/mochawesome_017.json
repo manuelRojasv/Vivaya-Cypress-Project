@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2021-03-27T01:51:54.654Z",
+    "end": "2021-03-27T01:52:35.586Z",
+    "duration": 40932,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "824dff27-801b-405d-a639-fd4a557f10d7",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a15_SearchGuide.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a15_SearchGuide.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "44d76953-5d8a-4825-87c3-a168de3f396b",
+          "title": "Search a Guide",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search a Guide Logged out",
+              "fullTitle": "Search a Guide Search a Guide Logged out",
+              "timedOut": null,
+              "duration": 17339,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "guidesPage.select_Guide_Tab();\nguidesPage.perform_a_Search('manu guide');\ncy.get('.n').should('contain.text', 'manu guide');\ncy.get('.col-sm-3').click();\ncy.get('h1').contains('manu guide stage');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.n`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.n`, but never found it.\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a15_SearchGuide.spec.js:246:18)",
+                "diff": null
+              },
+              "uuid": "985389a6-d0e0-4ea9-8eba-a3d8e2dbcad7",
+              "parentUUID": "44d76953-5d8a-4825-87c3-a168de3f396b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search a guide with Loged in  User",
+              "fullTitle": "Search a Guide Search a guide with Loged in  User",
+              "timedOut": null,
+              "duration": 21224,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\nhomePage.fill_Email('horcosio@gmail.com');\nhomePage.fill_Password('perrodelmal');\nhomePage.submit_Credentials();\ncy.wait(2000);\nguidesPage.select_Guide_Tab_when_Login();\nguidesPage.perform_a_Search('manu guide');\ncy.get('.n').should('contain.text', 'manu guide');\ncy.get('.col-sm-3').click();\ncy.get('h1').contains('manu guide stage');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.n`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.n`, but never found it.\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a15_SearchGuide.spec.js:258:18)",
+                "diff": null
+              },
+              "uuid": "f33a6301-b984-4121-a23d-7a80215ee3d2",
+              "parentUUID": "44d76953-5d8a-4825-87c3-a168de3f396b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "985389a6-d0e0-4ea9-8eba-a3d8e2dbcad7",
+            "f33a6301-b984-4121-a23d-7a80215ee3d2"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 38563,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

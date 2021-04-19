@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-07T14:47:00.269Z",
+    "end": "2021-04-07T14:48:31.387Z",
+    "duration": 91118,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d31b062f-cd67-4728-bae2-cc67738a604a",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a08_CreateEvent.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a08_CreateEvent.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "38a13a82-1a3d-46d1-8517-3010ba36b54f",
+          "title": "Events Creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create and Cancel Workshop Event",
+              "fullTitle": "Events Creation Create and Cancel Workshop Event",
+              "timedOut": null,
+              "duration": 39291,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboard.add_NewEvent();\ndashboard.add_Workshop();\neventCreationPage.add_EventName('Workshop1');\ncy.wait(2000);\neventCreationPage.add_Description('This is a Test Workshop');\neventCreationPage.add_Custom_Number_Of_Days(2);\neventCreationPage.add_Price('40');\neventCreationPage.press_Add();\ncy.get('#w0-success-0').should('contain', 'Events have been created.');\ncy.wait(3000);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {},
+              "uuid": "d5039e19-55c6-4dd2-a8b9-118301ec923c",
+              "parentUUID": "38a13a82-1a3d-46d1-8517-3010ba36b54f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create and Cancel Class Event",
+              "fullTitle": "Events Creation Create and Cancel Class Event",
+              "timedOut": null,
+              "duration": 35874,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('Class1');\ncy.wait(2000);\neventCreationPage.add_Description('This is a Test Class');\neventCreationPage.add_Custom_Number_Of_Days(2);\neventCreationPage.custom_Start_Time(5);\neventCreationPage.press_Add();\ncy.get('#w0-success-0').should('contain', 'Events have been created.');\ncy.wait(5000);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {},
+              "uuid": "e20ad01c-62a9-4d44-8839-5be444b7c9d6",
+              "parentUUID": "38a13a82-1a3d-46d1-8517-3010ba36b54f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create and Cancel One on One",
+              "fullTitle": "Events Creation Create and Cancel One on One",
+              "timedOut": null,
+              "duration": 10065,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashboard.add_NewEvent();\ndashboard.add_One_One();\neventCreationPage.add_EventName('One-One');\ncy.wait(2000);\neventCreationPage.add_Description('This is a Test for One on One');\neventCreationPage.add_Custom_Number_Of_Days(3);\neventCreationPage.custom_Start_Time(5);\ncy.get('#eventform-session_offering_id > :nth-child(1) > label > input').click();\ncy.get('#eventform-session_offering_id > :nth-child(2) > label > input').click();\ncy.get('#eventform-session_offering_id > :nth-child(3) > label > input').click();\neventCreationPage.press_Add();\ncy.get('#w0-success-0').should('contain', 'Events have been created.');\ncy.wait(5000);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {},
+              "uuid": "338396d1-924d-4dec-b9a3-35a28c9a4200",
+              "parentUUID": "38a13a82-1a3d-46d1-8517-3010ba36b54f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d5039e19-55c6-4dd2-a8b9-118301ec923c",
+            "e20ad01c-62a9-4d44-8839-5be444b7c9d6",
+            "338396d1-924d-4dec-b9a3-35a28c9a4200"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 85230,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

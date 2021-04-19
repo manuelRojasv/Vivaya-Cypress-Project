@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2021-03-30T16:21:09.018Z",
+    "end": "2021-03-30T16:22:12.211Z",
+    "duration": 63193,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b0dbf066-06f6-4f9f-897c-10e1cd797251",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Seminars/a22_CreateRepeatedEvent.spec.js",
+      "file": "cypress/integration/Tests/Seminars/a22_CreateRepeatedEvent.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "563793c7-2ae6-42c7-8d4b-a960b6e7d120",
+          "title": "Events Creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a recurrent Daily Class",
+              "fullTitle": "Events Creation Create a recurrent Daily Class",
+              "timedOut": null,
+              "duration": 61037,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\ndashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('Class1');\ncy.wait(2000);\neventCreationPage.add_Description('This is a Test Class');\neventCreationPage.select_Repeater_Checkbox();\neventCreationPage.add_Custom_Start_Date(3);\neventCreationPage.add_Custom_End_Date(10);\neventCreationPage.select_Repeater_Daily();\neventCreationPage.press_Add();\ncy.wait(5000); //dashboard.cancel_Several_Events_AtOnce()",
+              "err": {},
+              "uuid": "f2707177-d3d6-4b89-8bae-c1210cee3988",
+              "parentUUID": "563793c7-2ae6-42c7-8d4b-a960b6e7d120",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create a recurrent Weekly Class",
+              "fullTitle": "Events Creation Create a recurrent Weekly Class",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "0dea331a-61b7-471d-9af1-189b8fb0f028",
+              "parentUUID": "563793c7-2ae6-42c7-8d4b-a960b6e7d120",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f2707177-d3d6-4b89-8bae-c1210cee3988"
+          ],
+          "failures": [],
+          "pending": [
+            "0dea331a-61b7-471d-9af1-189b8fb0f028"
+          ],
+          "skipped": [],
+          "duration": 61037,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

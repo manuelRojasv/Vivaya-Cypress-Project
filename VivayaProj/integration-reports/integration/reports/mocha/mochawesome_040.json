@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 3,
+    "failures": -2,
+    "start": "2021-03-30T00:35:54.308Z",
+    "end": "2021-03-30T00:35:54.360Z",
+    "duration": 52,
+    "testsRegistered": 3,
+    "passPercent": null,
+    "pendingPercent": 100,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "9df1a69d-3bfe-4f2b-95f2-32562982f55d",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a12_BookEventfromHome.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a12_BookEventfromHome.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "082fe5fe-c46f-478d-bf2c-5b335b02cc41",
+          "title": "Booking Events",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event as a Guide",
+              "fullTitle": "Booking Events Create an Event as a Guide",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "d756420c-9dea-4cdd-b396-eb48ec26b142",
+              "parentUUID": "082fe5fe-c46f-478d-bf2c-5b335b02cc41",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book the Last Event from Home page",
+              "fullTitle": "Booking Events Book the Last Event from Home page",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "69aba6f2-d1f8-48ba-886f-7335ae2d190e",
+              "parentUUID": "082fe5fe-c46f-478d-bf2c-5b335b02cc41",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Guide delete the Event from his Dashboard",
+              "fullTitle": "Booking Events Guide delete the Event from his Dashboard",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "ed8791b7-2559-474f-8042-406a633421ed",
+              "parentUUID": "082fe5fe-c46f-478d-bf2c-5b335b02cc41",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [
+            "d756420c-9dea-4cdd-b396-eb48ec26b142",
+            "69aba6f2-d1f8-48ba-886f-7335ae2d190e",
+            "ed8791b7-2559-474f-8042-406a633421ed"
+          ],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

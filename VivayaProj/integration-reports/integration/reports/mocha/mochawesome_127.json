@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-30T20:35:05.007Z",
+    "end": "2021-03-30T20:37:14.953Z",
+    "duration": 129946,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "11236e9b-3185-44a9-b13e-a55a70b10cba",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Seminars/a21_BuySeminar.spec.js",
+      "file": "cypress/integration/Tests/Seminars/a21_BuySeminar.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c8a2916-3ba4-435f-9f82-1df42eb9ab09",
+          "title": "Add seminar to cart and remove from cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create a Seminar with one event",
+              "fullTitle": "Add seminar to cart and remove from cart Create a Seminar with one event",
+              "timedOut": null,
+              "duration": 62556,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\ndashboard.select_Add_Seminar();\nseminars.type_Seminar_Name(\"Seminar Automation\");\nseminars.add_Description(\"This is a Seminar for Automation Proj\");\nseminars.add_Custom_Start_Date(8);\nseminars.add_Custom_End_Date(15);\nseminars.select_Main_Offering('Yoga');\nseminars.add_Seminar_Price(150);\nseminars.select_Allow_Independent_Events();\nseminars.select_Publish_Button();\ncy.get('#w0-success-0').should('contain', 'Seminar has been created.');\ncy.get('h4 > a').should('contain', 'Seminar Automation'); //add seminar event\ndashboard.add_NewEvent();\ndashboard.add_Seminar_Event();\nseminarEvent.add_Seminar_Event_Name('Seminar Event test one');\nseminarEvent.add_Description('This is a seminar Event for testing');\nseminarEvent.add_Custom_Number_Of_Days(10);\nseminarEvent.custom_End_Time(2);\nseminarEvent.select_Existing_Seminar('Seminar Automation');\nseminarEvent.select_Assign_Guide('manu rex');\ncy.get('.tt-suggestion').click();\nseminarEvent.add_EventSeminar_Price(50);\nseminarEvent.select_Add_Button();\ncy.get('#w0-success-0').should('contain', 'Events have been created.');\nhomePage.logout_Account();",
+              "err": {},
+              "uuid": "d06e4dc6-2e08-4b1a-9606-15d9d262a980",
+              "parentUUID": "3c8a2916-3ba4-435f-9f82-1df42eb9ab09",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy Seminar",
+              "fullTitle": "Add seminar to cart and remove from cart Buy Seminar",
+              "timedOut": null,
+              "duration": 44004,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\ncy.get('.col-lg-8 > #footernav > :nth-child(3) > a').click();\ncy.get(':nth-child(1) > .n').click();\ncy.get(':nth-child(1) > .text-center > .btn').click();\ncy.get('.product > :nth-child(2) > h4').should('contain.text', 'Seminar: Seminar Automation');\ncartPage.select_Checkout();\ncartPage.select_Confirm_Purchase();\ncy.get('.order-summary').should('contain.text', 'Purchase Confirmation');\ncy.get(':nth-child(2) > .col-md-8').should('contain.text', 'SEMINAR: Seminar Automation');\ncartPage.select_Go_ToDashboard_AfterPurchase();\ncy.scrollTo(0, 300);\ncy.get('.cancel-seminar').click();\ndashboard.confirm_Cancelation_From_Dashboard();\ncy.wait(3000);",
+              "err": {},
+              "uuid": "cd975096-5a12-45a1-9a6f-bbec8a560bc4",
+              "parentUUID": "3c8a2916-3ba4-435f-9f82-1df42eb9ab09",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete Seminar from Guide Dashboard",
+              "fullTitle": "Add seminar to cart and remove from cart Delete Seminar from Guide Dashboard",
+              "timedOut": null,
+              "duration": 19824,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\nseminars.select_Cancel_Seminar();\ncy.get('#w0-success-0').should('contain', 'Seminar has been cancelled.');",
+              "err": {},
+              "uuid": "73ce33fd-5500-4abc-b74e-7be222ef880c",
+              "parentUUID": "3c8a2916-3ba4-435f-9f82-1df42eb9ab09",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d06e4dc6-2e08-4b1a-9606-15d9d262a980",
+            "cd975096-5a12-45a1-9a6f-bbec8a560bc4",
+            "73ce33fd-5500-4abc-b74e-7be222ef880c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 126384,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

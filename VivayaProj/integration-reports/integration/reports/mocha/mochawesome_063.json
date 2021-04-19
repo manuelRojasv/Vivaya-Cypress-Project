@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-30T16:00:37.612Z",
+    "end": "2021-03-30T16:01:21.850Z",
+    "duration": 44238,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1509399e-7e2f-4be3-929b-623dc1f10815",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a09_EditEvent.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a09_EditEvent.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b3258627-8361-4bf0-8593-3aa1f8392c70",
+          "title": "Events Creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event and Edit",
+              "fullTitle": "Events Creation Create an Event and Edit",
+              "timedOut": null,
+              "duration": 41998,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('class test');\ncy.wait(2000);\neventCreationPage.add_Description('This is a class test');\neventCreationPage.add_Custom_Number_Of_Days(2);\neventCreationPage.custom_Start_Time(10);\neventCreationPage.press_Add();\ncy.wait(3000);\ncy.scrollTo(0, 70);\ndashboard.select_Edit_Event();\ncy.get('#eventform-startdate').clear();\neventCreationPage.add_Custom_Number_Of_Days(4);\neventCreationPage.press_Update_After_Edit();\ncy.wait(3000);\ncy.get('#w0-success-0').should('contain', 'Event has been updated.');\ndashboard.cancel_Created_Event();\ncy.wait(2000);",
+              "err": {},
+              "uuid": "8ff4871d-6f6e-48c5-b115-ac8aa14b41d9",
+              "parentUUID": "b3258627-8361-4bf0-8593-3aa1f8392c70",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8ff4871d-6f6e-48c5-b115-ac8aa14b41d9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41998,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

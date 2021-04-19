@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-14T15:38:47.264Z",
+    "end": "2021-04-14T15:39:34.213Z",
+    "duration": 46949,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "058b796b-b503-4363-9648-82dacffe5b1e",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Corporate/c02_CreateCorporate.spec.js",
+      "file": "cypress/integration/Tests/Corporate/c02_CreateCorporate.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "64f399c6-b2ea-425c-86a2-5a777e0bd18b",
+          "title": "Tests to verify the Corporate creation, edition and Deletion",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "The Corp user creates his Corporation from the Front end",
+              "fullTitle": "Tests to verify the Corporate creation, edition and Deletion The Corp user creates his Corporation from the Front end",
+              "timedOut": null,
+              "duration": 23803,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "commons.open_Web_Site();\ncorporate.select_Corporate_As_Loggedout();\ncorporate.type_Corporate_Email('manu@automation.com');\ncorporate.select_register_Now();\ncy.wait(2000);\ncorporate.type_First_Name('manu');\ncorporate.type_Last_Name('automation');\ncorporate.type_Company_Name('Automation corp');\ncorporate.continue_From_Step1();\ncy.wait(2000);\ncy.get('#calendly-schedule > iframe').should('be.visible');",
+              "err": {},
+              "uuid": "440bd53e-4d2d-4bfb-9895-03087593acac",
+              "parentUUID": "64f399c6-b2ea-425c-86a2-5a777e0bd18b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify that the Corporate is created from the Frontend, after that edited and deleted by the Admin",
+              "fullTitle": "Tests to verify the Corporate creation, edition and Deletion Verify that the Corporate is created from the Frontend, after that edited and deleted by the Admin",
+              "timedOut": null,
+              "duration": 19544,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "commons.open_Admin_Site();\ncommons.set_Admin_Credentials();\nadmin_corporate.select_Corporate_Option();\nadmin_corporate.select_Corporate_List(); //edit the corporate Info and Update\ncy.wait(3000);\ncy.get('.table').find('.glyphicon-pencil').last().click();\nadmin_corporate.type_Corporate_Address('address automation');\nadmin_corporate.type_Corporate_PhoneNumber('73575915');\nadmin_corporate.update_Corporate_From_Form();\ncy.wait(2000);\ncy.get('.table').find('.glyphicon-trash').last().click();",
+              "err": {},
+              "uuid": "5bc39bbf-545a-42d8-b732-bb6a3a0ed374",
+              "parentUUID": "64f399c6-b2ea-425c-86a2-5a777e0bd18b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "440bd53e-4d2d-4bfb-9895-03087593acac",
+            "5bc39bbf-545a-42d8-b732-bb6a3a0ed374"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 43347,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

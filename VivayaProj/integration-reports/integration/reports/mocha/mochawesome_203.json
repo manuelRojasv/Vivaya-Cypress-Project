@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-07T17:01:10.453Z",
+    "end": "2021-04-07T17:01:55.030Z",
+    "duration": 44577,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5630a375-0336-4887-b322-8b517d503490",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Seminars/a16_CreateDeleteSeminar.spec.js",
+      "file": "cypress/integration/Tests/Seminars/a16_CreateDeleteSeminar.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cec6c332-d005-4ade-b798-f037ece7a55c",
+          "title": "Seminar Creation, Cancelation and Seminar Eevnt creation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create Edit and Delete a Seminar",
+              "fullTitle": "Seminar Creation, Cancelation and Seminar Eevnt creation Create Edit and Delete a Seminar",
+              "timedOut": null,
+              "duration": 41090,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.go_to_Dashboard_From_Menu();\ndashboard.select_Add_Seminar();\nseminars.type_Seminar_Name(\"Seminar Automation\");\nseminars.add_Description(\"This is a Seminar for Automation Proj\");\nseminars.add_Custom_Start_Date(8);\nseminars.add_Custom_End_Date(15);\nseminars.select_Main_Offering('Yoga');\nseminars.add_Seminar_Price(150);\nseminars.select_Allow_Independent_Events();\nseminars.select_Publish_Button();\ncy.get('#w0-success-0').should('contain', 'Seminar has been created.');\ncy.get('h4 > a').should('contain', 'Seminar Automation'); //Edit Seminar\nseminars.select_Edit_Seminar();\ncy.get('#seminar-name').clear();\nseminars.type_Seminar_Name(\"Seminar Automation Edited\");\nseminars.select_Publish_Button();\ncy.get('#w0-success-0').should('contain', 'Seminar has been updated.');\ncy.get('h4 > a').should('contain', 'Seminar Automation Edited'); //Cancel the Seminar\ncy.wait(3000);\nseminars.select_Cancel_Seminar();\ncy.get('#w0-success-0').should('contain', 'Seminar has been cancelled.');",
+              "err": {},
+              "uuid": "ca6eec1f-e785-4ddb-8b46-ac6801e58bb3",
+              "parentUUID": "cec6c332-d005-4ade-b798-f037ece7a55c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ca6eec1f-e785-4ddb-8b46-ac6801e58bb3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 41090,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

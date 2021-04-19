@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-09T22:25:19.358Z",
+    "end": "2021-04-09T22:25:58.398Z",
+    "duration": 39040,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "24527be5-ad47-4e28-8309-cfcf679c4e32",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a02_VerifySchedulePage.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a02_VerifySchedulePage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b1f4568b-9c6a-4d29-b6c4-e21d1966f362",
+          "title": "Tests to confirm the correct rediection to Schedule and elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Schedule page as Logged out",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Schedule page as Logged out",
+              "timedOut": null,
+              "duration": 11148,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "schedulePage.select_Schedule_Tab_When_Logout();\ncy.url().should('eq', 'https://stage.vivayalive.com/schedule');",
+              "err": {},
+              "uuid": "3630b279-b8aa-4c1f-8c06-fdf5221d2ee0",
+              "parentUUID": "b1f4568b-9c6a-4d29-b6c4-e21d1966f362",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Schedule Page as Logged in user",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Schedule Page as Logged in user",
+              "timedOut": null,
+              "duration": 18651,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nschedulePage.select_Schedule_Tab_When_Login();\ncy.url().should('eq', 'https://stage.vivayalive.com/schedule');",
+              "err": {},
+              "uuid": "731028c2-2413-4bfe-b52d-0f81adf8074e",
+              "parentUUID": "b1f4568b-9c6a-4d29-b6c4-e21d1966f362",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3630b279-b8aa-4c1f-8c06-fdf5221d2ee0",
+            "731028c2-2413-4bfe-b52d-0f81adf8074e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29799,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-14T00:49:33.354Z",
+    "end": "2021-04-14T00:50:11.744Z",
+    "duration": 38390,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "eec7d5af-d913-41f1-a56a-f4705bb5f19b",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a01_VerifyGuidesPage.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a01_VerifyGuidesPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "21cd3c4f-1ce7-4cd1-8eb2-5e43453018e4",
+          "title": "Tests to confirm the correct rediection to Schedule and elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Schedule page as Logged out",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Schedule page as Logged out",
+              "timedOut": null,
+              "duration": 15411,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "guidesPage.select_Guide_Tab_when_Logout();\ncy.url().should('eq', 'https://stage.vivayalive.com/guides');",
+              "err": {},
+              "uuid": "f86e0c8b-b9db-426d-9c62-c4b144aab15e",
+              "parentUUID": "21cd3c4f-1ce7-4cd1-8eb2-5e43453018e4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Schedule Page as Logged in user",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Schedule Page as Logged in user",
+              "timedOut": null,
+              "duration": 17190,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login(); //homePage.fill_Email('manu@guidetester.com')\n//homePage.fill_Password('perrodelmal')\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nguidesPage.select_Guide_Tab_when_Login();\ncy.url().should('eq', 'https://stage.vivayalive.com/guides');",
+              "err": {},
+              "uuid": "d280dcb0-1e3f-4a94-aeeb-c3e666b9d498",
+              "parentUUID": "21cd3c4f-1ce7-4cd1-8eb2-5e43453018e4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f86e0c8b-b9db-426d-9c62-c4b144aab15e",
+            "d280dcb0-1e3f-4a94-aeeb-c3e666b9d498"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32601,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

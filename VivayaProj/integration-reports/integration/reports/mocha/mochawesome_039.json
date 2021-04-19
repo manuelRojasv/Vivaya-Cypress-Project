@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-03-30T00:34:04.473Z",
+    "end": "2021-03-30T00:35:37.979Z",
+    "duration": 93506,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d50682ac-c670-4ed1-8d14-f9ef0c2e233e",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a11_BookEvent_Cancel_FDashboard.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a11_BookEvent_Cancel_FDashboard.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f1ae4caa-2841-4b1e-a78e-e8bf6e94c5b8",
+          "title": "Booking Event and Cancel the Event from Seeker Dashboard",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create an Event as a Guide",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Create an Event as a Guide",
+              "timedOut": null,
+              "duration": 29495,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ndashboard.add_NewEvent();\ndashboard.add_Class();\neventCreationPage.add_EventName('class test');\ncy.wait(2000);\neventCreationPage.add_Description('This is a class test');\neventCreationPage.add_Custom_Number_Of_Days(1);\neventCreationPage.custom_Start_Time(10);\neventCreationPage.press_Add();",
+              "err": {},
+              "uuid": "56d9f73f-8d7f-45e0-8f10-050d3a6363da",
+              "parentUUID": "f1ae4caa-2841-4b1e-a78e-e8bf6e94c5b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Book and cancel an event from Seeker Dashboard",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Book and cancel an event from Seeker Dashboard",
+              "timedOut": null,
+              "duration": 44318,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\nguidesPage.select_Guide_Tab_when_Login();\nguidesPage.perform_a_Search('manu rex');\ncy.wait(3000);\ncy.get('#w0 > div.row > div > a.img > img').click();\ncy.scrollTo(0, 600);\ncy.get('#w0 > div > div.col-md-3.vertical-align.col-xs-6.sm-block').click();\neventDetailPage.book_Event_from_EventDetail();\ndashboard.go_to_Dashboard_From_Menu();\ncy.wait(3000);\ndashboard.cancel_Event_As_Seeker();\ndashboard.confirm_Cancelation_From_Dashboard();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {},
+              "uuid": "8d15f1f3-75f9-40f0-ac07-ea362e4e0c71",
+              "parentUUID": "f1ae4caa-2841-4b1e-a78e-e8bf6e94c5b8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Guide delete the Event from his Dashboard",
+              "fullTitle": "Booking Event and Cancel the Event from Seeker Dashboard Guide delete the Event from his Dashboard",
+              "timedOut": null,
+              "duration": 17511,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(3000);\ndashboard.cancel_Created_Event();\ncy.get('#w0-success-0').should('contain', 'Event has been canceled.');",
+              "err": {},
+              "uuid": "19755b15-d60a-4aa6-95cb-18c95eee33bb",
+              "parentUUID": "f1ae4caa-2841-4b1e-a78e-e8bf6e94c5b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "56d9f73f-8d7f-45e0-8f10-050d3a6363da",
+            "8d15f1f3-75f9-40f0-ac07-ea362e4e0c71",
+            "19755b15-d60a-4aa6-95cb-18c95eee33bb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 91324,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

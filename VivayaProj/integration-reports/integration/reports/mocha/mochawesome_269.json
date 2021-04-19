@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-14T00:51:38.572Z",
+    "end": "2021-04-14T00:52:41.544Z",
+    "duration": 62972,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "152f3301-eb6b-40b4-bbdb-a8c954a0fa4d",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Basic Tests/a04_VerifyPricingPage.spec.js",
+      "file": "cypress/integration/Tests/Basic Tests/a04_VerifyPricingPage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "254dd871-ef66-4e9c-aec6-92411072af15",
+          "title": "Tests to confirm the correct rediection to Schedule and elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify the Pricing page as Logged out",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Pricing page as Logged out",
+              "timedOut": null,
+              "duration": 10048,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "pricingPage.select_Pricing_When_Logout();\ncy.url().should('eq', 'https://stage.vivayalive.com/membership');\ncy.get('.membership-timebased > .container > :nth-child(1) > strong').should('contain', 'Memberships');\ncy.get('.membership-normal-type > .container > :nth-child(1) > strong').should('contain', 'Packages');\ncy.get('.content-other-offerings > .container > h2 > strong').should('contain', 'All Other Offerings');",
+              "err": {},
+              "uuid": "cf6b6911-fb2d-42fe-af00-d7cf6dcd3405",
+              "parentUUID": "254dd871-ef66-4e9c-aec6-92411072af15",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Pricing Page as Logged in Guide",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Pricing Page as Logged in Guide",
+              "timedOut": null,
+              "duration": 15002,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Guide_Credentials_One();\nhomePage.submit_Credentials();\ncy.wait(2000);\npricingPage.select_Pricing_When_Login();\ncy.get('.membership-timebased > .container > :nth-child(1) > strong').should('contain', 'Memberships');\ncy.get('.membership-normal-type > .container > :nth-child(1) > strong').should('contain', 'Packages');\ncy.get('.content-other-offerings > .container > h2 > strong').should('contain', 'All Other Offerings');",
+              "err": {},
+              "uuid": "4099090c-f377-4f49-8f2a-6594d1c866e3",
+              "parentUUID": "254dd871-ef66-4e9c-aec6-92411072af15",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify the Pricing page as Loggedin Seeker, Free trial plan is expired",
+              "fullTitle": "Tests to confirm the correct rediection to Schedule and elements Verify the Pricing page as Loggedin Seeker, Free trial plan is expired",
+              "timedOut": null,
+              "duration": 34629,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePage.select_Login();\ncommons.set_Seeker_Credentials_Two();\nhomePage.submit_Credentials();\ncy.wait(2000);\npricingPage.select_Pricing_When_Login();\npricingPage.select_Suscribe_Monthly_5Pack();\ncy.wait(2000);\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\npricingPage.select_Pricing_When_Login();\ncy.scrollTo(0, 800);\npricingPage.buy_5Pack_Package();\ncy.wait(2000);\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();",
+              "err": {},
+              "uuid": "6e63ca0a-8dd9-4889-861d-e055d37918f6",
+              "parentUUID": "254dd871-ef66-4e9c-aec6-92411072af15",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cf6b6911-fb2d-42fe-af00-d7cf6dcd3405",
+            "4099090c-f377-4f49-8f2a-6594d1c866e3",
+            "6e63ca0a-8dd9-4889-861d-e055d37918f6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 59679,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}

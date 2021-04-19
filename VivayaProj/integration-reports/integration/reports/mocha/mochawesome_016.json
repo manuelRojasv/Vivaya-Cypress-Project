@@ -1,0 +1,247 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 0,
+    "pending": 0,
+    "failures": 7,
+    "start": "2021-03-27T01:48:46.256Z",
+    "end": "2021-03-27T01:51:26.828Z",
+    "duration": 160572,
+    "testsRegistered": 7,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a90743ae-1200-46a9-a8e5-75806b0a3bbe",
+      "title": "",
+      "fullFile": "cypress/integration/Tests/Guide and Seeker Actions/a14_BuyPackage.spec.js",
+      "file": "cypress/integration/Tests/Guide and Seeker Actions/a14_BuyPackage.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ea47da16-ecb1-4a66-99f0-6e2c3ca90d94",
+          "title": "Buy Plans from membership",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Buy Monthly 3 Pack Membership",
+              "fullTitle": "Buy Plans from membership Buy Monthly 3 Pack Membership",
+              "timedOut": null,
+              "duration": 26380,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\nmembershipPage.select_Subscribe_3Pack();\ncy.wait(3000);\ncy.get('#checkout-form > div:nth-child(2) > div:nth-child(2) > h4').contains('Monthly 3 Pack Membership').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Monthly 3 Pack Membership' within the element: <h4> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Monthly 3 Pack Membership' within the element: <h4> but never did.\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a14_BuyPackage.spec.js:266:111)",
+                "diff": null
+              },
+              "uuid": "41fedf97-7fb6-42a7-8a71-59dd814cb06c",
+              "parentUUID": "ea47da16-ecb1-4a66-99f0-6e2c3ca90d94",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy Monthly 5 Pack Membership",
+              "fullTitle": "Buy Plans from membership Buy Monthly 5 Pack Membership",
+              "timedOut": null,
+              "duration": 23819,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\nmembershipPage.select_Subscribe_5Pack();\ncy.wait(3000);\ncy.get('#checkout-form > div:nth-child(2) > div:nth-child(2) > h4').contains('Monthly 5 Pack Membership').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Monthly 5 Pack Membership' within the element: <h4> but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Monthly 5 Pack Membership' within the element: <h4> but never did.\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a14_BuyPackage.spec.js:276:111)",
+                "diff": null
+              },
+              "uuid": "bb8afd2f-fc83-4c43-8271-53c3ec5fd12d",
+              "parentUUID": "ea47da16-ecb1-4a66-99f0-6e2c3ca90d94",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy Monthly Unlimited Membership",
+              "fullTitle": "Buy Plans from membership Buy Monthly Unlimited Membership",
+              "timedOut": null,
+              "duration": 21269,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\nmembershipPage.select_Monthly_Unlimited();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('MONTHLY UNLIMITED MEMBERSHIP').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 19 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 19 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153308:17)\n    at Context.click (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153482:14)\n    at Context.<anonymous> (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:171546:21)\nFrom Your Spec Code:\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a14_BuyPackage.spec.js:287:30)",
+                "diff": null
+              },
+              "uuid": "13f8c6d2-1956-4656-ac8c-18b1469a549f",
+              "parentUUID": "ea47da16-ecb1-4a66-99f0-6e2c3ca90d94",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy Annual Unlimited Membership",
+              "fullTitle": "Buy Plans from membership Buy Annual Unlimited Membership",
+              "timedOut": null,
+              "duration": 23864,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\nmembershipPage.select_Annual_Unlimited();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('ANNUAL UNLIMITED MEMBERSHIP').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 20 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 20 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153308:17)\n    at Context.click (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153482:14)\n    at Context.<anonymous> (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:171546:21)\nFrom Your Spec Code:\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a14_BuyPackage.spec.js:297:30)",
+                "diff": null
+              },
+              "uuid": "545bbf5e-b534-4f9a-8c3e-cc29e29d93cb",
+              "parentUUID": "ea47da16-ecb1-4a66-99f0-6e2c3ca90d94",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy 1 class",
+              "fullTitle": "Buy Plans from membership Buy 1 class",
+              "timedOut": null,
+              "duration": 21294,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\ncy.scrollTo(0, 300);\nmembershipPage.select_Buy_1Class();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('1 CLASS').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 21 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 21 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153308:17)\n    at Context.click (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153482:14)\n    at Context.<anonymous> (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:171546:21)\nFrom Your Spec Code:\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a14_BuyPackage.spec.js:308:30)",
+                "diff": null
+              },
+              "uuid": "cff4e512-0cf7-4ed0-aff9-73d6dc4b39bc",
+              "parentUUID": "ea47da16-ecb1-4a66-99f0-6e2c3ca90d94",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy 5 Package",
+              "fullTitle": "Buy Plans from membership Buy 5 Package",
+              "timedOut": null,
+              "duration": 20910,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\ncy.scrollTo(0, 300);\nmembershipPage.select_Buy_5Pack();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('5 PACK').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 22 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 22 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153308:17)\n    at Context.click (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153482:14)\n    at Context.<anonymous> (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:171546:21)\nFrom Your Spec Code:\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a14_BuyPackage.spec.js:319:30)",
+                "diff": null
+              },
+              "uuid": "353f6a67-a0b8-4283-945d-c8ca13ae8450",
+              "parentUUID": "ea47da16-ecb1-4a66-99f0-6e2c3ca90d94",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buy 10 Package",
+              "fullTitle": "Buy Plans from membership Buy 10 Package",
+              "timedOut": null,
+              "duration": 20452,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(3000);\nmembershipPage.select_MShip_Tab();\ncy.scrollTo(0, 300);\nmembershipPage.select_Buy_10Pack();\ncy.wait(3000);\ncy.get('.product > :nth-child(2) > h4').contains('10 PACK').should('be.visible');\ncy.get('.remove-button').click();\ncartPage.confirm_Remove_From_Cart();\ncy.get('#w0-success-0').contains('Item has been removed from cart.');",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 23 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 23 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153308:17)\n    at Context.click (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:153482:14)\n    at Context.<anonymous> (https://stage.vivayalive.com/__cypress/runner/cypress_runner.js:171546:21)\nFrom Your Spec Code:\n    at Context.eval (https://stage.vivayalive.com/__cypress/tests?p=cypress/integration/Tests/Guide%20and%20Seeker%20Actions/a14_BuyPackage.spec.js:330:30)",
+                "diff": null
+              },
+              "uuid": "78151652-bd47-49e5-85a7-36e9ed0991b5",
+              "parentUUID": "ea47da16-ecb1-4a66-99f0-6e2c3ca90d94",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "41fedf97-7fb6-42a7-8a71-59dd814cb06c",
+            "bb8afd2f-fc83-4c43-8271-53c3ec5fd12d",
+            "13f8c6d2-1956-4656-ac8c-18b1469a549f",
+            "545bbf5e-b534-4f9a-8c3e-cc29e29d93cb",
+            "cff4e512-0cf7-4ed0-aff9-73d6dc4b39bc",
+            "353f6a67-a0b8-4283-945d-c8ca13ae8450",
+            "78151652-bd47-49e5-85a7-36e9ed0991b5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 157988,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "integration-reports/integration/reports/mocha",
+        "quiet": true,
+        "html": false,
+        "overwrite": false,
+        "json": true
+      },
+      "version": "4.1.0"
+    }
+  }
+}
